@@ -1,9 +1,16 @@
 package com.example.androidhttpurlconnection;
 
+import android.annotation.SuppressLint;
+
+import com.google.gson.annotations.Expose;
+
 public class Person {
     private int id;
+    @Expose
     private String name;
+    @Expose
     private String email;
+    @Expose
     private int age;
 
     public Person(int id, String name, String email, int age) {
@@ -45,8 +52,9 @@ public class Person {
         this.age = age;
     }
 
+    @SuppressLint("DefaultLocale")
     @Override
     public String toString() {
-        return "Person{}";
+        return String.format("%s (%d)", this.name, this.age);
     }
 }

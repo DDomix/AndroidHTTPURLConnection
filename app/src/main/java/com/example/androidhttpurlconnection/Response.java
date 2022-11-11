@@ -1,5 +1,6 @@
 package com.example.androidhttpurlconnection;
 
+
 public class Response {
     private int responseCode;
     private String content;
